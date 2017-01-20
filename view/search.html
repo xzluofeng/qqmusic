@@ -1,0 +1,27 @@
+<ion-view>
+    <ion-content>
+        <div class="list">
+            <form ng-submit="searchList()">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input id="search" type="text" placeholder="搜索歌曲歌单">
+                    </label>
+                    <button class="button button-small button-light" ng-click="clear()">
+                        取消
+                    </button>
+                </div>
+            </form>
+        </div>
+        <ion-list ng-repeat="item in subject" ng-click="tomic(item)">
+            <ion-item class="searchlist" ui-sref="music({id: item.songid})">
+                <i class="icon ion-ios-musical-notes musiclogo"></i>
+                <div class="musicinfo">
+                    <p>{{item.songname}}</p>
+                    <p>{{item.singername}}</p>
+                </div>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

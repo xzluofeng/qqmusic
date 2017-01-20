@@ -1,0 +1,11 @@
+<ion-view>
+    <ion-content overflow-scroll="true">
+        <ion-list>
+            <ion-item class="item-thumbnail-left item-text-wrap" ng-repeat="item in subjects.pagebean.songlist" ui-sref="music({id: item.songid})" ng-click="tomic(item)">
+                <img ng-src="{{ item.albumpic_small}}" alt="">
+                <h2>{{ item.singername }}</h2>
+                <p>{{ item.songname }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
